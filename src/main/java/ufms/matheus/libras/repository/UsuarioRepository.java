@@ -10,8 +10,8 @@ import java.util.List;
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
     //@Query(nativeQuery = true, value = "SELECT * FROM TB_USUARIO WHERE USU_NAME LIKE :name")
-    //@Query("SELECT c FROM Usuario c where c.name= :name")
-    //List<Usuario> consultaTest(@Param("name") String name);
+    @Query("SELECT c FROM Usuario c where c.name= :name")
+    List<Usuario> consultaTest(@Param("name") String name);
 
 
 }
