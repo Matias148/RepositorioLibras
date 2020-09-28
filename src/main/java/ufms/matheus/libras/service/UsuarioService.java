@@ -9,6 +9,7 @@ import ufms.matheus.libras.entity.Usuario;
 import ufms.matheus.libras.repository.UsuarioRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UsuarioService {
@@ -37,7 +38,7 @@ public class UsuarioService {
         return usuarioRepository.save(usuario);
     }
 
-    public Object buscarId(Long id){
+    public Optional<Usuario> buscarId(Long id){
         return usuarioRepository.findById(id);
     }
 
