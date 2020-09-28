@@ -11,12 +11,23 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(name = "USU_NAME", length = 100)
+    @Column(name = "USU_NAME", length = 100, nullable = false)
     private String name;
 
-    @Column(name = "USU_EMAIL", length = 100)
+    @Column(name = "USU_EMAIL", length = 100, nullable = false)
     private String email;
 
+    @Column(name = "USU_SENHA", length = 20, nullable = false)
+    private String senha;
+
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 
     public Long getId() {
         return id;

@@ -17,10 +17,11 @@ public class UsuarioService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
-    public List<Usuario> buscarTodos(String name, String email){
+    public List<Usuario> buscarTodos(String name, String email, String senha){
         Usuario cliente = new Usuario();
         cliente.setName(name);
         cliente.setEmail(email);
+        cliente.setSenha(senha);
 
         ExampleMatcher exampleMatcher = ExampleMatcher.matching()
                 .withIgnoreCase();

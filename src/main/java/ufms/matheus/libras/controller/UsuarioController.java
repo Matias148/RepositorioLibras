@@ -24,8 +24,9 @@ public class UsuarioController {
     @GetMapping
     @ResponseBody
     public ResponseEntity<?> buscar(@RequestParam(name="name", required = false) String name,
-                                    @RequestParam(name="email", required = false) String email){
-        return new ResponseEntity(usuarioService.buscarTodos(name, email), HttpStatus.OK);
+                                    @RequestParam(name="email", required = false) String email,
+                                    @RequestParam(name="senha", required = false) String senha){
+        return new ResponseEntity(usuarioService.buscarTodos(name, email, senha), HttpStatus.OK);
     }
 
     @PostMapping
