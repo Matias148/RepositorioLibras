@@ -20,6 +20,17 @@ public class Usuario {
     @Column(name = "USU_SENHA", length = 20, nullable = false)
     private String senha;
 
+    @Column(name = "USU_PESO")
+    private Double peso = 1.0;
+
+
+    public Double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(Double peso) {
+        this.peso = peso;
+    }
 
     public String getSenha() {
         return senha;
