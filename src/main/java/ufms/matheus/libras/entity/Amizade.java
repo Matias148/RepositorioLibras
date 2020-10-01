@@ -40,7 +40,6 @@ public class Amizade {
 //    public Usuario getAmigo() {
 //        return amigo;
 //    }
-//
 //    public void setAmigo(Usuario amigo) {
 //        this.amigo = amigo;
 //    }
