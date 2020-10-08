@@ -13,12 +13,12 @@ public class Amizade {
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "USU_ID", nullable = false)
+    @JoinColumn(name = "USU_ID_USUARIO", nullable = false)
     private Usuario usuario;
 
-//    @ManyToOne
-//    @JoinColumn(name = "USU_ID", nullable = false)
-//    private Usuario amigo;
+    @ManyToOne
+    @JoinColumn(name = "USU_ID_AMIGO", nullable = false)
+    private Usuario amigo;
 
 
     public Long getId() {
@@ -37,10 +37,10 @@ public class Amizade {
         this.usuario = usuario;
     }
 
-//    public Usuario getAmigo() {
-//        return amigo;
-//    }
-//    public void setAmigo(Usuario amigo) {
-//        this.amigo = amigo;
-//    }
+    public Usuario getAmigo() {
+        return amigo;
+    }
+    public void setAmigo(Usuario amigo) {
+        this.amigo = amigo;
+    }
 }
