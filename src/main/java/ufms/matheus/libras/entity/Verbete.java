@@ -1,8 +1,13 @@
 package ufms.matheus.libras.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.io.File;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "TB_VER")
 public class Verbete {
@@ -27,53 +32,4 @@ public class Verbete {
 
     @Column(name = "VER_DESCRILI", nullable = false)
     private String descricaoLibras;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
-    }
-
-    public String getTituloLibras() {
-        return tituloLibras;
-    }
-
-    public void setTituloLibras(String tituloLibras) {
-        this.tituloLibras = tituloLibras;
-    }
-
-    public String getDescricaoLibras() {
-        return descricaoLibras;
-    }
-
-    public void setDescricaoLibras(String descricaoLibras) {
-        this.descricaoLibras = descricaoLibras;
-    }
 }

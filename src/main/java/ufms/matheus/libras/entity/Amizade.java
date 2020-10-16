@@ -1,8 +1,13 @@
 package ufms.matheus.libras.entity;
 
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
 @Table(name = "TB_AMI")
 public class Amizade {
@@ -19,28 +24,4 @@ public class Amizade {
     @ManyToOne
     @JoinColumn(name = "USU_ID_AMIGO", nullable = false)
     private Usuario amigo;
-
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public Usuario getAmigo() {
-        return amigo;
-    }
-    public void setAmigo(Usuario amigo) {
-        this.amigo = amigo;
-    }
 }
