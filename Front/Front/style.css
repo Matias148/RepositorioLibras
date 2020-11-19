@@ -1,0 +1,25 @@
+header{
+    text-align: right;
+}
+
+#home {
+    width: 30px;
+    height: 30px;
+}
+
+#botaoHome{
+    width: 36px;
+    height: 36px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+#busca{
+    height: 500px;
+    writing-mode: vertical-lr;
+}
+
+/*#procurouPesquisa{*/
+/*    height: ;*/
+/*}*/
