@@ -16,10 +16,10 @@ public class Verbete {
     @Column(name = "VER_ID")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @ManyToOne
-    @JoinColumn(name = "USU_ID", nullable = false)
-    private Usuario usuario;
+//
+//    @ManyToOne
+//    @JoinColumn(name = "USU_ID", nullable = false)
+//    private Usuario usuario;
 
     @Column(name = "VER_TITULO", nullable = false)
     private String titulo;
