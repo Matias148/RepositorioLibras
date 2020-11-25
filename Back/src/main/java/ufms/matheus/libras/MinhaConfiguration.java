@@ -17,5 +17,4 @@ public class MinhaConfiguration {
     //public String teste(){
     //    return null;
     //}
-
 }
