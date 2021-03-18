@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/frontLibras.iml" filepath="$PROJECT_DIR$/frontLibras.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Back/libras.iml" filepath="$PROJECT_DIR$/../Back/libras.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../libras/libras/libras.iml" filepath="$PROJECT_DIR$/../libras/libras/libras.iml" />
     </modules>
   </component>
 </project>
