@@ -4,6 +4,9 @@ function subir() {
     var tituloLink = document.getElementById('linktitulo').value;
     var descriLink = document.getElementById('linkdescri').value;
 
+    tituloLink = tituloLink.split("=")[1];
+    descriLink = descriLink.split("=")[1];
+
     console.log(titulo1,descri,tituloLink,descriLink);
     axios.post('http://localhost:8080/api/verbete',
         {
