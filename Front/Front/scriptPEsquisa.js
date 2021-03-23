@@ -48,7 +48,7 @@ function carregarResultado() {
 
                     tbLink.style = "border: 1px solid blue";
                     tbNome.style = "border: 1px solid blue";
-                    tbDescri.style = "border: 1px solid blue";
+                    tbDescri.style = "border: 1px solid blue;width: 1000px";
                 }
             }
             tabela.style = "border: 1px solid black";
