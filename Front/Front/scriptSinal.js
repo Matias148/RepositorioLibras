@@ -13,11 +13,11 @@ function subir() {
                 titulo: titulo1.toString(),
                 descricao: descri.toString(),
                 tituloLibras: tituloLink.toString(),
-                descricaoLibras: descriLink.toString()
-
+                descricaoLibras: descriLink.toString(),
+                rank: 0.0
         })
         .then(function (response) {
-            console.log("teste")
+            console.log("teste");
             console.log(response.data);
         }).catch(function (response) {
             console.log("blah")

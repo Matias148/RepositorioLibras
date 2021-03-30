@@ -19,7 +19,6 @@ function mudar() {
 function carregarResultado() {
     axios.get('http://localhost:8080/api/verbete')
         .then(function (response) {
-            //console.log(response.data);
             var div = document.createElement("div");
             var tabela = document.createElement("table");
             for (let i = 0; i < response.data.length; i++){
@@ -53,9 +52,8 @@ function carregarResultado() {
             }
             tabela.style = "border: 1px solid black";
             div.appendChild(tabela);
-
             document.body.appendChild(div);
         }).catch(function (response) {
-            console.log(response.data)
+            console.error("Algo deu errado")
         });
 }
