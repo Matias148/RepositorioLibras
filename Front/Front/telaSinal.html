@@ -7,20 +7,43 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
         <script src="scriptSinal.js"></script>
     </head>
+    <header>
+        <button id="botaoHome"><img class="botaoInicial" src="assets/home.png" alt="Início" onclick="voltar()"></button>
+        <button id="botaoCadastro">
+            <img class="botaoInicial" src="assets/upar.png" alt="Upar Cadastro">
+        </button>
+    </header>
     <body>
-        <div id="form" style="width: fit-content">
-            <label>
-                <h7>Sinal: </h7><input class="form" type="text" id="titulo" placeholder="Sinal">
+        <div id="form" style="width: 400px">
+            <div>
+                <h7 class="cadastro">Sinal: </h7>
+                <input class="form" type="text" id="titulo" placeholder="Sinal" required>
                 <p></p>
-                <h7>Descrição: </h7>
-                <textarea class="form" style="font-family: Arial,serif"  id="descri" placeholder="Descreva o significado"></textarea>
+            </div>
+            <div>
+                <h7 class="cadastro">Descrição: </h7>
+                <textarea class="form"
+                          style="font-family: Arial,serif"
+                          id="descri"
+                          placeholder="Descreva o significado"
+                          maxlength="256"
+                          required
+                          cols="22"
+                          rows="1"></textarea>
                 <p></p>
-                <h7>Sinal Libras: </h7><input class="form" type="text" id="linktitulo" placeholder="Link do vídeo">
+            </div>
+            <div>
+                <h7 class="cadastro">Sinal Libras: </h7>
+                <input class="form" type="text" id="linktitulo" placeholder="Link do vídeo" required>
                 <p></p>
-                <h7>Descrição Libras: </h7><input class="form" type="text" id="linkdescri" placeholder="Link do vídeo">
-                <br>
-                <input type="submit" onclick="subir()">
-            </label>
+            </div>
+            <div>
+                <h7 class="cadastro">Descrição Libras: </h7>
+                <input class="form" type="text" id="linkdescri" placeholder="Link do vídeo" required>
+                <p></p>
+            </div>
+            <br>
+            <input type="submit" onclick="subir()">
         </div>
     </body>
 </html>

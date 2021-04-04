@@ -16,6 +16,14 @@ function mudar() {
     }
 }
 
+function cadastrar() {
+    window.location = "telaSinal.html";
+}
+
+function voltar(){
+    window.location = "index.html";
+}
+
 function carregarResultado() {
     axios.get('http://localhost:8080/api/verbete')
         .then(function (response) {

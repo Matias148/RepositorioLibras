@@ -6,8 +6,6 @@ function subir() {
 
     tituloLink = tituloLink.split("=")[1];
     descriLink = descriLink.split("=")[1];
-
-    console.log(titulo1,descri,tituloLink,descriLink);
     axios.post('http://localhost:8080/api/verbete',
         {
                 titulo: titulo1.toString(),
@@ -17,10 +15,12 @@ function subir() {
                 rank: 0.0
         })
         .then(function (response) {
-            console.log("teste");
             console.log(response.data);
         }).catch(function (response) {
-            console.log("blah")
-        console.log(response.data)
+            console.log(response.data)
     });
+}
+
+function voltar(){
+    window.location = "index.html";
 }

@@ -6,14 +6,20 @@
         <title>Pesquisa</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
     </head>
+    <header>
+        <button id="botaoHome" onclick="voltar()">
+            <img class="botaoInicial" src="assets/home.png" alt="Início">
+        </button>
+        <button id="botaoCadastro" onclick="cadastrar()">
+            <img class="botaoInicial" src="assets/upar.png" alt="Upar Cadastro">
+        </button>
+    </header>
     <body>
         <div id="div1">
-            <center >
-                <div id="buscaPesquisa">
-                    <input type="text" id="textoPesquisa" onchange="pesquisar()">
-                    <input type="button" value="Pesquisar" onclick="pesquisar()">
-                </div>
-            </center>
+            <div id="buscaPesquisa" style="text-align: center;">
+                <input type="text" id="textoPesquisa" onchange="pesquisar()">
+                <input type="button" value="Pesquisar" onclick="pesquisar()">
+            </div>
             <h1 id="procurouPesquisa">Você procurou por</h1>
         </div>
     </body>

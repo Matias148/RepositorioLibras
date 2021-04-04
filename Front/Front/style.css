@@ -16,7 +16,7 @@ header{
 }
 
 #busca{
-    height: 500px;
+    height: 50px;
     writing-mode: vertical-lr;
 }
 
@@ -30,4 +30,8 @@ header{
     padding-left: 0;
     padding-top: 0;
     padding-right: 0;
+}
+
+.cadastro{
+    vertical-align: middle;
 }
