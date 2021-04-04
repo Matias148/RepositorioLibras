@@ -19,10 +19,17 @@ function mudar() {
 function carregarResultado() {
     axios.get('http://localhost:8080/api/verbete')
         .then(function (response) {
+            response.data.sort(function (a, b) {
+                if (a.rank < b.rank){
+                    return 1;
+                }if (a.rank > b.rank){
+                    return -1
+                }
+                return 0;
+            });
             var div = document.createElement("div");
             var tabela = document.createElement("table");
             for (let i = 0; i < response.data.length; i++){
-                console.log(response.data[i]);
                 if (response.data[i].titulo.toString().includes(pesquisa.toString())){
 
                     var tblinha = document.createElement("tr");

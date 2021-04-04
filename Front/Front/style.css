@@ -2,7 +2,7 @@ header{
     text-align: right;
 }
 
-#home {
+.botaoInicial {
     width: 30px;
     height: 30px;
 }
@@ -18,6 +18,10 @@ header{
 #busca{
     height: 500px;
     writing-mode: vertical-lr;
+}
+
+.form{
+    float: right;
 }
 
 #botaoCadastro{

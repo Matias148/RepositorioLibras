@@ -7,11 +7,14 @@
         <script src="script.js"></script>
     </head>
     <header>
-        <button id="botaoHome"><img id="home" src="assets/home.png" alt="Início"></button>
-        <button id="botaoCadastro" onclick="cadastrar()"></button>
+        <button id="botaoHome"><img class="botaoInicial" src="assets/home.png" alt="Início"></button>
+        <button id="botaoCadastro" onclick="cadastrar()">
+            <img class="botaoInicial" src="assets/upar.png" alt="Upar Cadastro">
+        </button>
     </header>
     <body>
         <center >
+            <h1>Concret</h1>
             <div id="busca">
                 <input type="text" id="textoPesquisa" onchange="pesquisar()">
                 <input type="button" value="Pesquisar" onclick="pesquisar()">

@@ -8,15 +8,16 @@
         <script src="scriptSinal.js"></script>
     </head>
     <body>
-        <div id="form">
+        <div id="form" style="width: fit-content">
             <label>
-                <h7>Sinal: </h7><input type="text" id="titulo">
+                <h7>Sinal: </h7><input class="form" type="text" id="titulo" placeholder="Sinal">
                 <p></p>
-                <h7>Descrição: </h7><textarea id="descri"></textarea>
+                <h7>Descrição: </h7>
+                <textarea class="form" style="font-family: Arial,serif"  id="descri" placeholder="Descreva o significado"></textarea>
                 <p></p>
-                <h7>Sinal Libras: </h7><input type="text" id="linktitulo">
+                <h7>Sinal Libras: </h7><input class="form" type="text" id="linktitulo" placeholder="Link do vídeo">
                 <p></p>
-                <h7>Descrição Libras: </h7><input type="text" id="linkdescri">
+                <h7>Descrição Libras: </h7><input class="form" type="text" id="linkdescri" placeholder="Link do vídeo">
                 <br>
                 <input type="submit" onclick="subir()">
             </label>
