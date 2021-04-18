@@ -30,8 +30,17 @@ public class Verbete {
     @Column(name = "VER_TITULOLI", nullable = false)
     private String tituloLibras;
 
-    @Column(name = "VER_DESCRILI", nullable = false)
+    @Column(name = "VER_DESCRILI")
     private String descricaoLibras;
+
+    @Column(name = "VER_CONFIGMAO")
+    private String configuracaoMao;
+
+    @Column(name = "VER_PONTOARTI")
+    private String pontoArticulacao;
+
+    @Column(name = "VER_DIRECAOPALMA")
+    private String direcaoPalma;
 
     @Column(name = "VER_RANK")
     private Double rank;
