@@ -24,7 +24,7 @@ public class Verbete {
     @Column(name = "VER_TITULO", nullable = false)
     private String titulo;
 
-    @Column(name = "VER_DESCRI", nullable = false)
+    @Column(name = "VER_DESCRI", nullable = false, length = 1000)
     private String descricao;
 
     @Column(name = "VER_TITULOLI", nullable = false)
