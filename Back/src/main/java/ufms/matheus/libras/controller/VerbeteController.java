@@ -5,6 +5,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import ufms.matheus.libras.entity.Usuario;
 import ufms.matheus.libras.entity.Verbete;
 import ufms.matheus.libras.service.UsuarioService;
@@ -17,7 +19,7 @@ public class VerbeteController {
     @Autowired
     private VerbeteService verbeteService;
 
-    @GetMapping("{id}")
+    @GetMapping("/{id}")
     @ResponseBody
     public ResponseEntity<?> buscarId(@PathVariable("id") Long id){
         return new ResponseEntity(verbeteService.buscarId(id), HttpStatus.OK);
@@ -25,20 +27,27 @@ public class VerbeteController {
 
     @GetMapping
     @ResponseBody
-    public ResponseEntity<?> buscar(@RequestParam(name="titulo", required = false) String titulo,
-                                    @RequestParam(name="descricao", required = false) String descricao,
-                                    @RequestParam(name="tituloLibras", required = false) String tituloLibras,
+    public ResponseEntity<?> buscar(@RequestParam(name="titulo") String titulo,
+                                    @RequestParam(name="descricao") String descricao,
+                                    @RequestParam(name="tituloLibras") String tituloLibras,
                                     @RequestParam(name="descricaoLibras", required = false) String descricaoLibras){
         return new ResponseEntity(verbeteService.buscarTodos(titulo, descricao, tituloLibras, descricaoLibras), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping(consumes = "multipart/form-data")
     @ResponseBody
-    public ResponseEntity<?> salvar(@RequestBody Verbete verbete){
+    public ResponseEntity<?> salvar(@ModelAttribute MultipartFile titulo,
+                                    @ModelAttribute MultipartFile significado,
+                                    @RequestBody Verbete verbete){
+//        String fileName = fileStorageService.storeFile(file);
+//        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
+//                .path("/downloadFile/")
+//                .path(fileName)
+//                .toUriString();
         return new ResponseEntity(verbeteService.salvar(verbete), HttpStatus.OK);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     @ResponseBody
     public ResponseEntity<?> deletar(@PathVariable("id") Long id){
         verbeteService.deletar(id);

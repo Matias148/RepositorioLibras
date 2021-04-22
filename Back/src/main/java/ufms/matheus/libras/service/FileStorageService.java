@@ -18,6 +18,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
+import java.util.List;
 
 @Service
 public class FileStorageService {
@@ -76,6 +77,7 @@ public class FileStorageService {
             throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
         }
     }
+
     public Resource loadFileAsResource(String fileName) throws Exception {
         try {
             Path filePath = this.fileStorageLocation.resolve(fileName).normalize();
@@ -92,4 +94,6 @@ public class FileStorageService {
     public String getDocumentName(Integer userId, String docType) {
         return docStorageRepo.getUploadDocumnetPath(userId, docType);
     }
+
+    public List<FileStorageProperties> findAll(){return docStorageRepo.findAll();}
 }

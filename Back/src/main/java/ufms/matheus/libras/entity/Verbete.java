@@ -2,6 +2,7 @@ package ufms.matheus.libras.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import ufms.matheus.libras.pojo.FileStorageProperties;
 
 import javax.persistence.*;
 import java.io.File;
