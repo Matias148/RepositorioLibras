@@ -34,16 +34,9 @@ public class VerbeteController {
         return new ResponseEntity(verbeteService.buscarTodos(titulo, descricao, tituloLibras, descricaoLibras), HttpStatus.OK);
     }
 
-    @PostMapping(consumes = "multipart/form-data")
+    @PostMapping
     @ResponseBody
-    public ResponseEntity<?> salvar(@ModelAttribute MultipartFile titulo,
-                                    @ModelAttribute MultipartFile significado,
-                                    @RequestBody Verbete verbete){
-//        String fileName = fileStorageService.storeFile(file);
-//        String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
-//                .path("/downloadFile/")
-//                .path(fileName)
-//                .toUriString();
+    public ResponseEntity<?> salvar(@RequestBody Verbete verbete){
         return new ResponseEntity(verbeteService.salvar(verbete), HttpStatus.OK);
     }
 

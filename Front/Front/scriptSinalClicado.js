@@ -9,23 +9,17 @@ axios.get('http://localhost:8080/api/verbete/'+idSinal).
         document.title = "Sinal - " + response.data.titulo;
 
         var titulo = document.createTextNode(response.data.titulo + "  " + response.data.rank);
-        var video = document.createElement("iframe");
-        var descriLibras = document.createElement("iframe");
+        var video = document.createElement("img");
+        var descriLibras = document.createElement("img");
         var descricao = document.createTextNode(response.data.descricao);
 
         var divTitulo = document.createElement("div");
         var divVideos = document.createElement("div");
         var divDescricao = document.createElement("div");
 
-        video.src = "https://www.youtube.com/embed/"+response.data.tituloLibras;
-        video.width = "560";
-        video.height = "315";
-        video.allowFullscreen = true;
+        video.src = response.data.tituloLibras;
 
-        descriLibras.src = "https://www.youtube.com/embed/"+response.data.descricaoLibras;
-        descriLibras.width = "560";
-        descriLibras.height = "315";
-        descriLibras.allowFullscreen = true;
+        descriLibras.src = response.data.descricaoLibras;
 
         video.alt = "titulo libras";
         descriLibras.alt = "Descrição libras";

@@ -27,10 +27,6 @@ public class VerbeteService {
     @Autowired
     private VerbeteRepository verbeteRepository;
 
-//    public Verbete salvar(MultipartFile titulo, MultipartFile significado, Verbete verbete){
-//
-//    }
-
     public List<Usuario> buscarTodos(String titulo, String descricao, String tituloLibras, String descricaoLibras){
         Verbete cliente = new Verbete();
         cliente.setTitulo(titulo);
@@ -65,43 +61,5 @@ public class VerbeteService {
     public  Verbete alterar(Long id, Verbete usuario){
         return verbeteRepository.save(usuario);
     }
-
-//    public String storeFile(MultipartFile file, Verbete verbete) {
-//        // Normalize file name
-//        String originalFileName = StringUtils.cleanPath(file.getOriginalFilename());
-//        String fileName = "";
-//        try {
-//            // Check if the file's name contains invalid characters
-//            if(originalFileName.contains("..")) {
-//                throw new FileStorageException("Sorry! Filename contains invalid path sequence " + originalFileName);
-//            }
-//            String fileExtension = "";
-//            try {
-//                fileExtension = originalFileName.substring(originalFileName.lastIndexOf("."));
-//            } catch(Exception e) {
-//                fileExtension = "";
-//            }
-//            fileName = verbete.getId() + "_" + fileExtension;
-//            // Copy file to the target location (Replacing existing file with the same name)
-//            Path targetLocation = this.fileStorageLocation.resolve(fileName);
-//            Files.copy(file.getInputStream(), targetLocation, StandardCopyOption.REPLACE_EXISTING);
-//            FileStorageProperties doc = docStorageRepo.checkDocumentByUserId(userId, docType);
-//            if(doc != null) {
-//                doc.setDocumentFormat(file.getContentType());
-//                doc.setFileName(fileName);
-//                docStorageRepo.save(doc);
-//            } else {
-//                FileStorageProperties newDoc = new FileStorageProperties();
-//                newDoc.setUserId(userId);
-//                newDoc.setDocumentFormat(file.getContentType());
-//                newDoc.setFileName(fileName);
-//                newDoc.setDocumentType(docType);
-//                docStorageRepo.save(newDoc);
-//            }
-//            return fileName;
-//        } catch (IOException ex) {
-//            throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
-//        }
-//    }
 
 }

@@ -2,10 +2,8 @@ package ufms.matheus.libras.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import ufms.matheus.libras.pojo.FileStorageProperties;
 
 import javax.persistence.*;
-import java.io.File;
 
 @Getter
 @Setter
@@ -28,10 +26,10 @@ public class Verbete {
     @Column(name = "VER_DESCRI", nullable = false, length = 1000)
     private String descricao;
 
-    @Column(name = "VER_TITULOLI", nullable = false)
+    @Column(name = "VER_TITULOLI", nullable = false, columnDefinition = "NVARCHAR(MAX)")
     private String tituloLibras;
 
-    @Column(name = "VER_DESCRILI")
+    @Column(name = "VER_DESCRILI", columnDefinition = "NVARCHAR(MAX)")
     private String descricaoLibras;
 
     @Column(name = "VER_CONFIGMAO")

@@ -14,10 +14,11 @@
         </button>
     </header>
     <body>
-        <div id="form" style="width: 400px">
+        <div id="form" style="width: 600px">
             <div>
                 <h7 class="cadastro">Termo em português: </h7>
-                <input class="form" type="text" id="titulo" placeholder="Sinal" required>
+                <input class="form" type="text" id="titulo" placeholder="Sinal" required title="Escreva aqui o termo que deseja
+inserir em português-BR">
                 <p></p>
             </div>
             <div>
@@ -26,21 +27,42 @@
                           style="font-family: Arial,serif"
                           id="descri"
                           placeholder="Descreva o significado"
-                          maxlength="256"
                           required
                           cols="22"
-                          rows="1"></textarea>
+                          rows="1" title="Explique o significado do termo"></textarea>
                 <p></p>
             </div>
             <div>
                 <h7 class="cadastro">Sinal-Termo: </h7>
-                <input class="form" type="text" id="linktitulo" placeholder="Link do vídeo" required>
+                <input class="form" type="file" id="linktitulo" onchange="previewFile()" required title="Insira o arquivo contendo o
+sinal-termo em Libras">
                 <p></p>
             </div>
             <div>
                 <h7 class="cadastro">Conceito em Libras: </h7>
-                <input class="form" type="text" id="linkdescri" placeholder="Link do vídeo" required>
+                <input class="form" type="file" id="linkdescri" onchange="previewFile()" title="Insira o arquivo contendo o
+significado em Libras">
                 <p></p>
+            </div>
+            <br>
+            <h3 class="cadastro" style="size: 10px">Descrição Fonética (para especialistas)</h3>
+            <div id="imagem">
+                <h7 class="cadastro" >Configuração de Mão: </h7>
+                <input id="config" class="form" type="number" placeholder="Número da configuração">
+                <span>
+                    <img width="500" height="500" src="assets/co4.jpg" alt="config">
+                </span>
+            </div>
+            <br>
+            <div>
+                <h7 class="cadastro" >Direção da Palma: </h7>
+                <select name="direcao" id="mao" class="form">
+                    <option value="Não Desejo">Não desejo Contribuir</option>
+                    <option value="Cima">Cima</option>
+                    <option value="Baixo">Baixo</option>
+                    <option value="Contra-Lateral">Contra-Lateral</option>
+                    <option value="Ipse-Lateral">Ipse-Lateral</option>
+                </select>
             </div>
             <br>
             <input type="submit" onclick="subir()">
